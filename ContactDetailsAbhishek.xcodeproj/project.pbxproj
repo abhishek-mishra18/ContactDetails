@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9A1CE8B2C38090300A77EBF /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A1CE8A2C38090300A77EBF /* UpdateViewController.swift */; };
 		B9DFAF662C37B7E1003E7528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DFAF652C37B7E1003E7528 /* AppDelegate.swift */; };
 		B9DFAF682C37B7E1003E7528 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DFAF672C37B7E1003E7528 /* SceneDelegate.swift */; };
 		B9DFAF6A2C37B7E1003E7528 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DFAF692C37B7E1003E7528 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B9A1CE8A2C38090300A77EBF /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		B9DFAF622C37B7E1003E7528 /* ContactDetailsAbhishek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactDetailsAbhishek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9DFAF652C37B7E1003E7528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9DFAF672C37B7E1003E7528 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				B9DFAF672C37B7E1003E7528 /* SceneDelegate.swift */,
 				B9DFAF692C37B7E1003E7528 /* ViewController.swift */,
 				B9DFAF6B2C37B7E1003E7528 /* Main.storyboard */,
+				B9A1CE8A2C38090300A77EBF /* UpdateViewController.swift */,
 				B9DFAF6E2C37B7E2003E7528 /* Assets.xcassets */,
 				B9DFAF702C37B7E2003E7528 /* LaunchScreen.storyboard */,
 				B9DFAF732C37B7E2003E7528 /* Info.plist */,
@@ -261,6 +264,7 @@
 				B9DFAF6A2C37B7E1003E7528 /* ViewController.swift in Sources */,
 				B9DFAF662C37B7E1003E7528 /* AppDelegate.swift in Sources */,
 				B9DFAF682C37B7E1003E7528 /* SceneDelegate.swift in Sources */,
+				B9A1CE8B2C38090300A77EBF /* UpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
