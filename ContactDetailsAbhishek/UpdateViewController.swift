@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ContactDetailsProtocol: AnyObject{
+    func didUpdateDetails(email:String, phoneNumber: String)
+}
+
 class UpdateViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -15,11 +19,22 @@ class UpdateViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
         
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var phoneTextField: UITextField!
+    
+    weak var delegate: ContactDetailsProtocol?
+    
+    
     @IBAction func goBackButtonTapped() {
-            dismiss(animated: true, completion: nil)
+        let email = emailTextField.text ?? "No Value"
+        let phone = phoneTextField.text ?? "No Value"
+        delegate?.didUpdateDetails(email: email, phoneNumber: phone)
+        navigationController?.popViewController(animated: true)
     }
     
-
+    
+    
     /*
     // MARK: - Navigation
 

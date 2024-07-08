@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yj7-ga-wTe">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -49,7 +49,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Update Contact"/>
                                 <connections>
-                                    <segue destination="b4R-aN-iIq" kind="presentation" id="wed-SE-6NW"/>
+                                    <action selector="saveText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zhg-EY-GFI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n37-14-dlQ">
@@ -80,19 +80,21 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZR6-SV-sI6"/>
                     <connections>
+                        <outlet property="emailLabel" destination="lRk-2k-ZoL" id="55G-8h-KE9"/>
                         <outlet property="image" destination="Les-T3-yDj" id="hbW-oP-MSH"/>
+                        <outlet property="phoneLabel" destination="Wgo-BS-zfI" id="b0k-OJ-o5l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="947.32824427480909" y="3.5211267605633805"/>
         </scene>
         <!--Update View Controller-->
         <scene sceneID="NnG-g7-FCk">
             <objects>
-                <viewController id="b4R-aN-iIq" customClass="UpdateViewController" customModule="ContactDetailsAbhishek" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="second" id="b4R-aN-iIq" customClass="UpdateViewController" customModule="ContactDetailsAbhishek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="goq-Df-ZUY" customClass="Updat">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Update Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYM-jP-pk0">
@@ -134,17 +136,39 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Update"/>
                                 <connections>
-                                    <action selector="goBackButtonTapped" destination="b4R-aN-iIq" eventType="touchUpInside" id="FNe-J6-uGZ"/>
+                                    <action selector="goBackButtonTapped" destination="b4R-aN-iIq" eventType="touchUpInside" id="rvY-kg-xmW"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qDq-cs-z0h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="NYz-6y-rtW" id="FMq-uu-pbk"/>
+                        <outlet property="phoneTextField" destination="A1n-ac-tBj" id="CTz-I7-x25"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqd-O9-AJt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="794.6564885496183" y="17.605633802816904"/>
+            <point key="canvasLocation" x="1721.3740458015266" y="17.605633802816904"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3io-vE-bcp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yj7-ga-wTe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NFc-X2-Efq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="x4k-5n-BBu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v2A-cm-I7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
