@@ -12,8 +12,6 @@ extension ViewController: ContactDetailsProtocol{
         emailLabel.text = email
         phoneLabel.text = phoneNumber
     }
-    
-    
 }
 
 class ViewController: UIViewController {
@@ -28,9 +26,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveText(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "second") as? UpdateViewController
+        let vc = self.storyboard?
+            .instantiateViewController(withIdentifier: "second")as?
+            UpdateViewController
         vc?.delegate = self
-        self.navigationController?.pushViewController(vc!, animated: true)
+        self.navigationController?
+            .pushViewController(vc!, animated: true)
         }
     
     override func viewDidLayoutSubviews() {
