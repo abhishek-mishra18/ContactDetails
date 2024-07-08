@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContactDetailsAbhishek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Contact Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETe-ia-y21">
@@ -49,9 +49,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Update Contact"/>
                                 <connections>
-                                    <segue destination="b4R-aN-iIq" kind="popoverPresentation" popoverAnchorView="dIR-g1-Zlu" id="VlJ-Ou-zbm">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="b4R-aN-iIq" kind="presentation" id="wed-SE-6NW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n37-14-dlQ">
@@ -89,11 +87,11 @@
             </objects>
             <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Update View Controller-->
         <scene sceneID="NnG-g7-FCk">
             <objects>
-                <viewController id="b4R-aN-iIq" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="goq-Df-ZUY">
+                <viewController id="b4R-aN-iIq" customClass="UpdateViewController" customModule="ContactDetailsAbhishek" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="goq-Df-ZUY" customClass="Updat">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -136,9 +134,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Update"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="WU9-Qh-1ou" id="v1H-0W-F6m">
-                                        <popoverArrowDirection key="popoverArrowDirection" down="YES"/>
-                                    </segue>
+                                    <action selector="goBackButtonTapped" destination="b4R-aN-iIq" eventType="touchUpInside" id="FNe-J6-uGZ"/>
                                 </connections>
                             </button>
                         </subviews>
